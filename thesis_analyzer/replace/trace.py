@@ -23,11 +23,26 @@ trace_index = {
 	"timestamp":1, #Timestamp when trace began to this destination.
 	"hops":2 #Response hop list.
 }
+hop_index = {
+	"ip":0, #IP address which sent a TTL expired packet.
+	"rtt":1, #RTT of the TTL expired packet.
+	"ntries":2 #number of tries before response received from hop.
+}
 
-#use '\t' as delimiter.
+#use ' ' as header delimiter.
 #use '!!' as header indicator.
+header_delimiter = " "
+header_indicator = "!!"
+
+field_delimiter = "\t"
+
+hop_delimiter = " " #hop_delimiter must differ from field_delimiter
+ip_delimiter = ","
+reply_delimiter = ";"
+blank_holder = "q"
+
 def print_header(source, date, monitor, src_ip):
-	print ( "!! %s %s %s %s" % (source, date, monitor, src_ip) )
+	print ( "%s%s%s%s%s%s%s%s%s" % (header_indicator, header_delimiter, source, header_delimiter, date, header_delimiter, monitor, header_delimiter, src_ip) )
 
 def bash_import():
 	print "declare -A header"
@@ -45,7 +60,7 @@ def bash_import():
 	return ""
 
 def update_src_ip(header, src_ip):
-	fields = header.split(' ')
+	fields = header.split(header_delimiter)
 	fields[header_index["src_ip"]] = src_ip
 	
 	header = "!!"
@@ -62,9 +77,25 @@ def build_trace_str(dst_ip, timestamp, hops):
 	
 	str = ""
 	for i in range(len(field_list)):
-		str += field_list[i]+"\t"
+		str += field_list[i]+field_delimiter
 	
-	return str.strip('\t')
+	return str.strip(field_delimiter)
+
+#hop: each hop could consist of up to 3 replies.
+#     hop is the reply_list, 
+#     each item in reply_list is a tuple, 
+#     format of the tuple corresponds to hop_index
+def build_hop_str(hop):
+	if len(hop) == 0:
+		return "q"
+	
+	rpl_str=""
+	for i in range(len(hop)):
+		ip = hop[i][hop_index["ip"]]
+		rtt = hop[i][hop_index["rtt"]]
+		ntries = hop[i][hop_index["ntries"]]
+		rpl_str += "%s%s%s%s%s%s" % (ip, ip_delimiter, rtt, ip_delimiter, ntries, reply_delimiter)
+	return rpl_str.strip(reply_delimiter)
 
 def usage():
 	#sort dict by value.
