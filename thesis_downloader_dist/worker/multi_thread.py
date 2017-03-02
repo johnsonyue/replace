@@ -23,22 +23,25 @@ def get_alive_thread_cnt(th_pool):
 	
 	return cnt_alive;
 
-def task_wrapper(func, argv, res_list, started_list, ind):
+def task_wrapper(func, argv, resource, res_list, started_list, ind):
 	started_list[ind] = True;
-	res = func(argv)
+	res = func(argv, resource)
 	res_list[ind] = res;
 	started_list[ind] = False;
 	
 #each task dependently owns 1 argv, 
 #all tasks share 1 same resource list.
+#type of resource is <type_list>.
 def run_with_multi_thread(func, argv_list, resource_list, mt_num=-1): #list of argv(s)
 	if (mt_num <= 1):
 		for argv in argv_list:
-			func(argv)
+			func(argv,[""])
 	elif (mt_num > 1): 
 		#use flags to keep track of stage of each task.
 		is_finished = [False for i in range(len(argv_list))]; 
 		is_started = [False for i in range(len(argv_list))];
+
+		cur_resource = 0
 		while(True):
 				task_list = [];
 				th_pool = [];
@@ -55,13 +58,13 @@ def run_with_multi_thread(func, argv_list, resource_list, mt_num=-1): #list of a
 				for i in range(len(task_list)):
 					argv = argv_list[task_list[i]]
 					ind = task_list[i]
-					resource = resource_list[cur_proxy]
+					resource = resource_list[cur_resource]
 					cur_resource += 1
-					if (cur_proxy >= len(proxy_list)):
-						cur_proxy = 0
-						time.sleep(10)
+					if (cur_resource >= len(resource_list)):
+						cur_resource = 0
+						time.sleep(1)
 
-					th = TaskThread(target=task_wrapper, args=(func,argv,is_finished,is_started,ind));
+					th = TaskThread(target=task_wrapper, args=(func,argv,resource,is_finished,is_started,ind));
 					th_pool.append(th);
 					th.start();
 					

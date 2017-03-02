@@ -157,12 +157,43 @@ def parse_time_dir(url, opener):
 	return res;
 
 #downloading with multi-thread support.
+def download_caida_restricted_worker(url, dir, file, username, password, proxy=""):
+	passwd_mgr = urllib2.HTTPPasswordMgrWithDefaultRealm();
+	passwd_mgr.add_password("topo-data", url, username, password);
+
+	opener = urllib2.build_opener(urllib2.HTTPBasicAuthHandler(passwd_mgr));
+
+	if(proxy != ""):
+		opener.add_handler(urllib2.ProxyHandler({"http":proxy}));
+
+	if not os.path.exists(dir):
+		os.makedirs(dir);
+
+	res = True;
+	ex = None;
+	try:
+		if not os.path.exists(dir+file):
+			f = opener.open(url, timeout=10);
+			fp = open(dir+file, 'wb');
+			fp.write(f.read());
+			fp.close();
+			f.close();
+	except Exception, e:
+		ex = e;
+		res = False;
+		if os.path.exists(dir+file):
+			os.remove(dir+file);
+	
+	if res:
+		print url.split('/')[-1] + " " + proxy + " " + str(res) + " " + (str(ex) if ex!=None else "succeeded");
+	
+	return res;
+
 def download_caida_restricted_worker_mt_wrapper(url, dir, file, username, password, res_list, started_list, ind, proxy=""):
 	started_list[ind] = True;
-	res = download_worker.download_caida_restricted_worker(url, dir, file, username, password, proxy);
+	res = download_caida_restricted_worker(url, dir, file, username, password, proxy);
 	res_list[ind] = res;
 	started_list[ind] = False;
-	
 
 class DownloadThread(threading.Thread):
 	def __init__(self, target, args):
