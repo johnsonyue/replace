@@ -1,9 +1,18 @@
 import HTMLParser
 import urllib2
 import re
-import os
-import time
-import download_worker
+import json
+
+import multi_thread
+
+#load authentication info.
+username=""
+password=""
+load_auth("account.json")
+def load_auth(auth_file):
+	j = json.loads( open(auth_file,'r').read() )
+	username = j["caida"]["username"]
+	password = j["caida"]["password"]
 
 #html parsers.
 class CaidaParser(HTMLParser.HTMLParser):
@@ -35,23 +44,7 @@ class CaidaParser(HTMLParser.HTMLParser):
 			href_value = self.get_attr_value("href", attrs);
 			self.file.append(href_value);
 
-#utils.
-def read_auth(auth_file, account):
-	ret = [];
-
-	is_provided = False;
-	for line in open(auth_file, 'r'):
-		if (line=="\n"):
-			continue;
-		if (is_provided and len(re.findall("#",line)) ==0):
-			ret.append(line.strip('\n'));
-		elif(is_provided):
-			break;
-
-		if (len(re.findall("#"+account,line)) != 0):
-			is_provided = True;
-	return ret;
-
+#latest time.
 #must be of the same length.
 def time_cmp(t1, t2):
 	for i in range(len(t1)):
@@ -61,8 +54,6 @@ def time_cmp(t1, t2):
 		return int(t1[i]) - int(t2[i]);
 	return 0;
 
-#target retrieving.
-#latest time.
 def get_latest_time_fromsite(username, password):
 	url = "https://topo-data.caida.org/team-probing/list-7.allpref24/";
 	passwd_mgr = urllib2.HTTPPasswordMgrWithDefaultRealm();
@@ -155,9 +146,50 @@ def parse_time_dir(url, opener):
 	
 	return res;
 
-#downloading with multi-thread support.
-def download_date(date, root_dir="data/", proxy_file="", mt_num=0 ):
-	auth = read_auth("auth", "caida");
+#caida restricted.
+def download_caida_restricted_wrapper(args):
+	url = args[0]
+	dir = args[1]
+	file= args[2]
+	username= args[3]
+	password= args[4]
+	proxy = args[5]
+	download_caida_restricted_worker(url, dir, file, username, password, proxy)
+
+def download_caida_restricted_worker(url, dir, file, username, password, proxy=""):
+	passwd_mgr = urllib2.HTTPPasswordMgrWithDefaultRealm();
+	passwd_mgr.add_password("topo-data", url, username, password);
+
+	opener = urllib2.build_opener(urllib2.HTTPBasicAuthHandler(passwd_mgr));
+
+	if(proxy != ""):
+		opener.add_handler(urllib2.ProxyHandler({"http":proxy}));
+
+	if not os.path.exists(dir):
+		os.makedirs(dir);
+
+	res = True;
+	ex = None;
+	try:
+		if not os.path.exists(dir+file):
+			f = opener.open(url, timeout=10);
+			fp = open(dir+file, 'wb');
+			fp.write(f.read());
+			fp.close();
+			f.close();
+	except Exception, e:
+		ex = e;
+		res = False;
+		if os.path.exists(dir+file):
+			os.remove(dir+file);
+	
+	if res:
+		print url.split('/')[-1] + " " + proxy + " " + str(res) + " " + (str(ex) if ex!=None else "succeeded");
+	
+	return res;
+
+def download_date(date, root_dir="data/", proxy_file="", mt_num=-1):
+	#get url list.
 	is_succeeded = False;
 	round_cnt = 1;
 	while(not is_succeeded):
@@ -169,64 +201,28 @@ def download_date(date, root_dir="data/", proxy_file="", mt_num=0 ):
 			round_cnt = round_cnt + 1;
 			time.sleep(10*round_cnt);
 
+	#destination directory.
 	dir = root_dir+date+"/";
 	if (not os.path.exists(dir)):
 		os.makedirs(dir);
 	
-	if (mt_num == 0):
-		for url in url_list:
-			team = url.split('/')[5];
-			suffix = url.split('/')[-1].split('.',4)[-1];
-			file = team+"."+suffix;
-			if( not os.path.exists(dir+file) ):
-				res = False;
-				while(not res):
-					res = download_worker.download_caida_restricted_worker(url, dir, file, auth[0], auth[1]) 
+	#proxy_list.
+	proxy_list = [];
+	fp = open(proxy_file,'rb');
+	for line in fp.readlines():
+		proxy_list.append(line.strip('\n'));
+	
+	#build argv_list
+	argv_list = []
+	for url in url_list:
+		team = url.split('/')[5];
+		suffix = url.split('/')[-1].split('.',4)[-1];
+		file = team+"."+suffix;
+		if( os.path.exists(dir+file) ):
+			continue
 
-	elif (mt_num >= 1):
-		is_finished = [False for i in range(len(url_list))];
-		is_started = [False for i in range(len(url_list))];
-		proxy_list = [];
-		fp = open(proxy_file,'rb');
-		for line in fp.readlines():
-			proxy_list.append(line.strip('\n'));
-		cur_proxy = 0;
-		
-		while(True):
-			task_list = [];
-			th_pool = [];
-			has_started = False;
-			for i in range(len(url_list)):
-				if (not is_finished[i] and not is_started[i]):
-					task_list.append(i);
-				if (is_started[i]):
-					has_started = True;
-					
-			if (len(task_list) == 0 and not has_started):
-				break;
-			
-			for i in range(len(task_list)):
-				url = url_list[task_list[i]];
-				team = url.split('/')[5];
-				suffix = url.split('/')[-1].split('.',4)[-1];
-				file = team+"."+suffix;
-				ind = task_list[i];
-				proxy = proxy_list[cur_proxy];
-				cur_proxy = cur_proxy + 1;
-				if (cur_proxy >= len(proxy_list)):
-					cur_proxy = 0;
-					time.sleep(10);
-
-				if( os.path.exists(dir+file) ):
-                                        print "skipping existing file: "+file;
-                                        is_finished[ind] = True;
-                                        continue;
-
-				th = DownloadThread(target=download_caida_restricted_worker_mt_wrapper, args=(url,dir,file,auth[0],auth[1],is_finished,is_started,ind,proxy,) );
-				th_pool.append(th);
-				th.start();
-				
-				while(get_alive_thread_cnt(th_pool) >= mt_num):
-					time.sleep(1);
-
-download_date("20161219", root_dir="caida_download/", proxy_file="proxy_list", mt_num=5 );
+		argv = (url, dir, file, username, password, proxy_list)
+		argv_list.append(argv_list)
+	
+	#run with multi thread.
+	multi_thread.run_with_multi_thread(download_caida_restricted_wrapper, argv_list, mt_num)

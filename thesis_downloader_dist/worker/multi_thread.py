@@ -1,7 +1,7 @@
 import threading
 import time
 
-class DownloadThread(threading.Thread):
+class TaskThread(threading.Thread):
 	def __init__(self, target, args):
 		threading.Thread.__init__(self, target=target, args=args);
 		self.start_time = time.time();
@@ -29,7 +29,9 @@ def task_wrapper(func, argv, res_list, started_list, ind):
 	res_list[ind] = res;
 	started_list[ind] = False;
 	
-def run_with_multi_thread(func, argv_list, mt_num): #list of argv(s)
+#each task dependently owns 1 argv, 
+#all tasks share 1 same resource list.
+def run_with_multi_thread(func, argv_list, resource_list, mt_num=-1): #list of argv(s)
 	if (mt_num <= 1):
 		for argv in argv_list:
 			func(argv)
@@ -51,9 +53,15 @@ def run_with_multi_thread(func, argv_list, mt_num): #list of argv(s)
 					break;
 				
 				for i in range(len(task_list)):
-					argv = argv_list[task_list[i]];
+					argv = argv_list[task_list[i]]
 					ind = task_list[i]
-					th = DownloadThread(target=task_wrapper, args=(func,argv,is_finished,is_started,ind));
+					resource = resource_list[cur_proxy]
+					cur_resource += 1
+					if (cur_proxy >= len(proxy_list)):
+						cur_proxy = 0
+						time.sleep(10)
+
+					th = TaskThread(target=task_wrapper, args=(func,argv,is_finished,is_started,ind));
 					th_pool.append(th);
 					th.start();
 					
