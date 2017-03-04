@@ -1,0 +1,328 @@
+20161027
+2016-12-23 13:30:06 analyze11 20161027 started
+20161026
+2016-12-23 13:30:11 analyze11 20161026 started
+20161025
+2016-12-23 13:30:16 analyze11 20161025 started
+20161024
+2016-12-23 13:30:21 analyze11 20161024 started
+20161023
+2016-12-23 13:30:26 analyze11 20161023 started
+20161022
+2016-12-23 13:30:31 analyze11 20161022 started
+20161021
+2016-12-23 13:30:36 analyze11 20161021 started
+20161020
+2016-12-23 13:30:41 analyze11 20161020 started
+20161019
+2016-12-23 13:30:46 analyze11 20161019 started
+20161018
+2016-12-23 13:30:52 analyze11 20161018 started
+"bash -c "echo 20161026 | ./dump.sh caida | python file2trace.py caida | python dump_graph.py" >/out_dir//20161026/20161026.graph
+2016-12-23 13:49:10 analyze11 20161026 finished, time used:  1138.54382706(s)python /home/john/thesis_downloader_dist/manager/analyze_manager//run.py caida on_notify finished analyze11 20161026 1138.54382706
+20161007
+2016-12-23 13:49:11 analyze11 20161007 started
+"bash -c "echo 20161018 | ./dump.sh caida | python file2trace.py caida | python dump_graph.py" >/out_dir//20161018/20161018.graph
+2016-12-23 14:09:31 analyze11 20161018 finished, time used:  2319.44913602(s)python /home/john/thesis_downloader_dist/manager/analyze_manager//run.py caida on_notify finished analyze11 20161018 2319.44913602
+20161006
+2016-12-23 14:09:32 analyze11 20161006 started
+"bash -c "echo 20161022 | ./dump.sh caida | python file2trace.py caida | python dump_graph.py" >/out_dir//20161022/20161022.graph
+2016-12-23 14:09:51 analyze11 20161022 finished, time used:  2359.58746696(s)python /home/john/thesis_downloader_dist/manager/analyze_manager//run.py caida on_notify finished analyze11 20161022 2359.58746696
+20161005
+2016-12-23 14:09:51 analyze11 20161005 started
+"bash -c "echo 20161024 | ./dump.sh caida | python file2trace.py caida | python dump_graph.py" >/out_dir//20161024/20161024.graph
+2016-12-23 14:11:28 analyze11 20161024 finished, time used:  2466.80204511(s)python /home/john/thesis_downloader_dist/manager/analyze_manager//run.py caida on_notify finished analyze11 20161024 2466.80204511
+20161004
+2016-12-23 14:11:28 analyze11 20161004 started
+"bash -c "echo 20161021 | ./dump.sh caida | python file2trace.py caida | python dump_graph.py" >/out_dir//20161021/20161021.graph
+2016-12-23 14:13:57 analyze11 20161021 finished, time used:  2600.69066405(s)python /home/john/thesis_downloader_dist/manager/analyze_manager//run.py caida on_notify finished analyze11 20161021 2600.69066405
+20161003
+2016-12-23 14:13:57 analyze11 20161003 started
+"bash -c "echo 20161027 | ./dump.sh caida | python file2trace.py caida | python dump_graph.py" >/out_dir//20161027/20161027.graph
+2016-12-23 14:27:36 analyze11 20161027 finished, time used:  3450.30229211(s)python /home/john/thesis_downloader_dist/manager/analyze_manager//run.py caida on_notify finished analyze11 20161027 3450.30229211
+20161002
+2016-12-23 14:27:37 analyze11 20161002 started
+"bash -c "echo 20161019 | ./dump.sh caida | python file2trace.py caida | python dump_graph.py" >/out_dir//20161019/20161019.graph
+2016-12-23 14:28:08 analyze11 20161019 finished, time used:  3441.55856299(s)python /home/john/thesis_downloader_dist/manager/analyze_manager//run.py caida on_notify finished analyze11 20161019 3441.55856299
+20161001
+2016-12-23 14:28:08 analyze11 20161001 started
+"bash -c "echo 20161023 | ./dump.sh caida | python file2trace.py caida | python dump_graph.py" >/out_dir//20161023/20161023.graph
+2016-12-23 14:29:26 analyze11 20161023 finished, time used:  3540.08975983(s)python /home/john/thesis_downloader_dist/manager/analyze_manager//run.py caida on_notify finished analyze11 20161023 3540.08975983
+20160930
+2016-12-23 14:29:27 analyze11 20160930 started
+"bash -c "echo 20161020 | ./dump.sh caida | python file2trace.py caida | python dump_graph.py" >/out_dir//20161020/20161020.graph
+2016-12-23 14:32:06 analyze11 20161020 finished, time used:  3684.24335408(s)python /home/john/thesis_downloader_dist/manager/analyze_manager//run.py caida on_notify finished analyze11 20161020 3684.24335408
+20160929
+2016-12-23 14:32:07 analyze11 20160929 started
+"bash -c "echo 20161004 | ./dump.sh caida | python file2trace.py caida | python dump_graph.py" >/out_dir//20161004/20161004.graph
+2016-12-23 14:32:34 analyze11 20161004 finished, time used:  1265.528157(s)python /home/john/thesis_downloader_dist/manager/analyze_manager//run.py caida on_notify finished analyze11 20161004 1265.528157
+20160802
+2016-12-23 14:32:35 analyze11 20160802 started
+"bash -c "echo 20161025 | ./dump.sh caida | python file2trace.py caida | python dump_graph.py" >/out_dir//20161025/20161025.graph
+2016-12-23 14:32:50 analyze11 20161025 finished, time used:  3753.83312011(s)python /home/john/thesis_downloader_dist/manager/analyze_manager//run.py caida on_notify finished analyze11 20161025 3753.83312011
+20160801
+2016-12-23 14:32:51 analyze11 20160801 started
+"bash -c "echo 20160930 | ./dump.sh caida | python file2trace.py caida | python dump_graph.py" >/out_dir//20160930/20160930.graph
+2016-12-23 14:49:23 analyze11 20160930 finished, time used:  1196.48067498(s)python /home/john/thesis_downloader_dist/manager/analyze_manager//run.py caida on_notify finished analyze11 20160930 1196.48067498
+20160731
+2016-12-23 14:49:24 analyze11 20160731 started
+"bash -c "echo 20161007 | ./dump.sh caida | python file2trace.py caida | python dump_graph.py" >/out_dir//20161007/20161007.graph
+2016-12-23 14:51:44 analyze11 20161007 finished, time used:  3753.46889281(s)python /home/john/thesis_downloader_dist/manager/analyze_manager//run.py caida on_notify finished analyze11 20161007 3753.46889281
+20160730
+2016-12-23 14:51:45 analyze11 20160730 started
+"bash -c "echo 20161003 | ./dump.sh caida | python file2trace.py caida | python dump_graph.py" >/out_dir//20161003/20161003.graph
+2016-12-23 15:00:19 analyze11 20161003 finished, time used:  2781.11911106(s)python /home/john/thesis_downloader_dist/manager/analyze_manager//run.py caida on_notify finished analyze11 20161003 2781.11911106
+20160729
+2016-12-23 15:00:19 analyze11 20160729 started
+"bash -c "echo 20161005 | ./dump.sh caida | python file2trace.py caida | python dump_graph.py" >/out_dir//20161005/20161005.graph
+2016-12-23 15:09:24 analyze11 20161005 finished, time used:  3573.11800313(s)python /home/john/thesis_downloader_dist/manager/analyze_manager//run.py caida on_notify finished analyze11 20161005 3573.11800313
+20160728
+2016-12-23 15:09:24 analyze11 20160728 started
+"bash -c "echo 20160731 | ./dump.sh caida | python file2trace.py caida | python dump_graph.py" >/out_dir//20160731/20160731.graph
+2016-12-23 15:10:45 analyze11 20160731 finished, time used:  1280.70185304(s)python /home/john/thesis_downloader_dist/manager/analyze_manager//run.py caida on_notify finished analyze11 20160731 1280.70185304
+20160715
+2016-12-23 15:10:46 analyze11 20160715 started
+"bash -c "echo 20161006 | ./dump.sh caida | python file2trace.py caida | python dump_graph.py" >/out_dir//20161006/20161006.graph
+2016-12-23 15:13:02 analyze11 20161006 finished, time used:  3810.26063514(s)python /home/john/thesis_downloader_dist/manager/analyze_manager//run.py caida on_notify finished analyze11 20161006 3810.26063514
+20160714
+2016-12-23 15:13:03 analyze11 20160714 started
+"bash -c "echo 20161001 | ./dump.sh caida | python file2trace.py caida | python dump_graph.py" >/out_dir//20161001/20161001.graph
+2016-12-23 15:21:12 analyze11 20161001 finished, time used:  3183.62699294(s)python /home/john/thesis_downloader_dist/manager/analyze_manager//run.py caida on_notify finished analyze11 20161001 3183.62699294
+20160713
+2016-12-23 15:21:12 analyze11 20160713 started
+"bash -c "echo 20161002 | ./dump.sh caida | python file2trace.py caida | python dump_graph.py" >/out_dir//20161002/20161002.graph
+2016-12-23 15:27:46 analyze11 20161002 finished, time used:  3608.60355711(s)python /home/john/thesis_downloader_dist/manager/analyze_manager//run.py caida on_notify finished analyze11 20161002 3608.60355711
+20160627
+2016-12-23 15:27:47 analyze11 20160627 started
+"bash -c "echo 20160801 | ./dump.sh caida | python file2trace.py caida | python dump_graph.py" >/out_dir//20160801/20160801.graph
+2016-12-23 15:30:48 analyze11 20160801 finished, time used:  3477.39040804(s)python /home/john/thesis_downloader_dist/manager/analyze_manager//run.py caida on_notify finished analyze11 20160801 3477.39040804
+20160626
+2016-12-23 15:30:49 analyze11 20160626 started
+"bash -c "echo 20160802 | ./dump.sh caida | python file2trace.py caida | python dump_graph.py" >/out_dir//20160802/20160802.graph
+2016-12-23 15:33:31 analyze11 20160802 finished, time used:  3656.54626083(s)python /home/john/thesis_downloader_dist/manager/analyze_manager//run.py caida on_notify finished analyze11 20160802 3656.54626083
+20160625
+2016-12-23 15:33:32 analyze11 20160625 started
+"bash -c "echo 20160929 | ./dump.sh caida | python file2trace.py caida | python dump_graph.py" >/out_dir//20160929/20160929.graph
+2016-12-23 15:36:59 analyze11 20160929 finished, time used:  3892.57960701(s)python /home/john/thesis_downloader_dist/manager/analyze_manager//run.py caida on_notify finished analyze11 20160929 3892.57960701
+20160624
+2016-12-23 15:37:00 analyze11 20160624 started
+"bash -c "echo 20160729 | ./dump.sh caida | python file2trace.py caida | python dump_graph.py" >/out_dir//20160729/20160729.graph
+2016-12-23 15:58:32 analyze11 20160729 finished, time used:  3493.22172403(s)python /home/john/thesis_downloader_dist/manager/analyze_manager//run.py caida on_notify finished analyze11 20160729 3493.22172403
+20160623
+2016-12-23 15:58:33 analyze11 20160623 started
+"bash -c "echo 20160730 | ./dump.sh caida | python file2trace.py caida | python dump_graph.py" >/out_dir//20160730/20160730.graph
+2016-12-23 16:00:04 analyze11 20160730 finished, time used:  4098.52471304(s)python /home/john/thesis_downloader_dist/manager/analyze_manager//run.py caida on_notify finished analyze11 20160730 4098.52471304
+20160622
+2016-12-23 16:00:04 analyze11 20160622 started
+"bash -c "echo 20160627 | ./dump.sh caida | python file2trace.py caida | python dump_graph.py" >/out_dir//20160627/20160627.graph
+2016-12-23 16:05:31 analyze11 20160627 finished, time used:  2263.84138894(s)python /home/john/thesis_downloader_dist/manager/analyze_manager//run.py caida on_notify finished analyze11 20160627 2263.84138894
+20160621
+2016-12-23 16:05:31 analyze11 20160621 started
+"bash -c "echo 20160728 | ./dump.sh caida | python file2trace.py caida | python dump_graph.py" >/out_dir//20160728/20160728.graph
+2016-12-23 16:08:26 analyze11 20160728 finished, time used:  3541.68905282(s)python /home/john/thesis_downloader_dist/manager/analyze_manager//run.py caida on_notify finished analyze11 20160728 3541.68905282
+20160620
+2016-12-23 16:08:27 analyze11 20160620 started
+"bash -c "echo 20160715 | ./dump.sh caida | python file2trace.py caida | python dump_graph.py" >/out_dir//20160715/20160715.graph
+2016-12-23 16:17:04 analyze11 20160715 finished, time used:  3978.69424391(s)python /home/john/thesis_downloader_dist/manager/analyze_manager//run.py caida on_notify finished analyze11 20160715 3978.69424391
+20160619
+2016-12-23 16:17:05 analyze11 20160619 started
+"bash -c "echo 20160624 | ./dump.sh caida | python file2trace.py caida | python dump_graph.py" >/out_dir//20160624/20160624.graph
+2016-12-23 16:18:07 analyze11 20160624 finished, time used:  2466.54712701(s)python /home/john/thesis_downloader_dist/manager/analyze_manager//run.py caida on_notify finished analyze11 20160624 2466.54712701
+20160618
+2016-12-23 16:18:07 analyze11 20160618 started
+"bash -c "echo 20160714 | ./dump.sh caida | python file2trace.py caida | python dump_graph.py" >/out_dir//20160714/20160714.graph
+2016-12-23 16:20:28 analyze11 20160714 finished, time used:  4045.50752997(s)python /home/john/thesis_downloader_dist/manager/analyze_manager//run.py caida on_notify finished analyze11 20160714 4045.50752997
+20160616
+2016-12-23 16:20:28 analyze11 20160616 started
+"bash -c "echo 20160623 | ./dump.sh caida | python file2trace.py caida | python dump_graph.py" >/out_dir//20160623/20160623.graph
+2016-12-23 16:21:28 analyze11 20160623 finished, time used:  1375.25520086(s)python /home/john/thesis_downloader_dist/manager/analyze_manager//run.py caida on_notify finished analyze11 20160623 1375.25520086
+20160615
+2016-12-23 16:21:29 analyze11 20160615 started
+"bash -c "echo 20160713 | ./dump.sh caida | python file2trace.py caida | python dump_graph.py" >/out_dir//20160713/20160713.graph
+2016-12-23 16:24:11 analyze11 20160713 finished, time used:  3778.30393696(s)python /home/john/thesis_downloader_dist/manager/analyze_manager//run.py caida on_notify finished analyze11 20160713 3778.30393696
+20160614
+2016-12-23 16:24:11 analyze11 20160614 started
+"bash -c "echo 20160626 | ./dump.sh caida | python file2trace.py caida | python dump_graph.py" >/out_dir//20160626/20160626.graph
+2016-12-23 16:32:43 analyze11 20160626 finished, time used:  3713.96339607(s)python /home/john/thesis_downloader_dist/manager/analyze_manager//run.py caida on_notify finished analyze11 20160626 3713.96339607
+20160613
+2016-12-23 16:32:43 analyze11 20160613 started
+"bash -c "echo 20160625 | ./dump.sh caida | python file2trace.py caida | python dump_graph.py" >/out_dir//20160625/20160625.graph
+2016-12-23 16:32:47 analyze11 20160625 finished, time used:  3554.61248088(s)python /home/john/thesis_downloader_dist/manager/analyze_manager//run.py caida on_notify finished analyze11 20160625 3554.61248088
+20160612
+2016-12-23 16:32:48 analyze11 20160612 started
+"bash -c "echo 20160621 | ./dump.sh caida | python file2trace.py caida | python dump_graph.py" >/out_dir//20160621/20160621.graph
+2016-12-23 17:01:40 analyze11 20160621 finished, time used:  3368.44586182(s)python /home/john/thesis_downloader_dist/manager/analyze_manager//run.py caida on_notify finished analyze11 20160621 3368.44586182
+20160611
+2016-12-23 17:01:40 analyze11 20160611 started
+"bash -c "echo 20160622 | ./dump.sh caida | python file2trace.py caida | python dump_graph.py" >/out_dir//20160622/20160622.graph
+2016-12-23 17:06:08 analyze11 20160622 finished, time used:  3963.80860186(s)python /home/john/thesis_downloader_dist/manager/analyze_manager//run.py caida on_notify finished analyze11 20160622 3963.80860186
+20160610
+2016-12-23 17:06:09 analyze11 20160610 started
+"bash -c "echo 20160614 | ./dump.sh caida | python file2trace.py caida | python dump_graph.py" >/out_dir//20160614/20160614.graph
+2016-12-23 17:06:11 analyze11 20160614 finished, time used:  2520.48434091(s)python /home/john/thesis_downloader_dist/manager/analyze_manager//run.py caida on_notify finished analyze11 20160614 2520.48434091
+20160609
+2016-12-23 17:06:14 analyze11 20160609 started
+"bash -c "echo 20160620 | ./dump.sh caida | python file2trace.py caida | python dump_graph.py" >/out_dir//20160620/20160620.graph
+2016-12-23 17:07:13 analyze11 20160620 finished, time used:  3526.1461041(s)python /home/john/thesis_downloader_dist/manager/analyze_manager//run.py caida on_notify finished analyze11 20160620 3526.1461041
+20160608
+2016-12-23 17:07:14 analyze11 20160608 started
+"bash -c "echo 20160612 | ./dump.sh caida | python file2trace.py caida | python dump_graph.py" >/out_dir//20160612/20160612.graph
+2016-12-23 17:16:37 analyze11 20160612 finished, time used:  2628.91831303(s)python /home/john/thesis_downloader_dist/manager/analyze_manager//run.py caida on_notify finished analyze11 20160612 2628.91831303
+20160607
+2016-12-23 17:16:38 analyze11 20160607 started
+"bash -c "echo 20160619 | ./dump.sh caida | python file2trace.py caida | python dump_graph.py" >/out_dir//20160619/20160619.graph
+2016-12-23 17:20:17 analyze11 20160619 finished, time used:  3791.4917171(s)python /home/john/thesis_downloader_dist/manager/analyze_manager//run.py caida on_notify finished analyze11 20160619 3791.4917171
+20160606
+2016-12-23 17:20:18 analyze11 20160606 started
+"bash -c "echo 20160615 | ./dump.sh caida | python file2trace.py caida | python dump_graph.py" >/out_dir//20160615/20160615.graph
+2016-12-23 17:20:31 analyze11 20160615 finished, time used:  3542.36649799(s)python /home/john/thesis_downloader_dist/manager/analyze_manager//run.py caida on_notify finished analyze11 20160615 3542.36649799
+20160605
+2016-12-23 17:20:32 analyze11 20160605 started
+"bash -c "echo 20160618 | ./dump.sh caida | python file2trace.py caida | python dump_graph.py" >/out_dir//20160618/20160618.graph
+2016-12-23 17:21:52 analyze11 20160618 finished, time used:  3824.34271884(s)python /home/john/thesis_downloader_dist/manager/analyze_manager//run.py caida on_notify finished analyze11 20160618 3824.34271884
+20160604
+2016-12-23 17:21:52 analyze11 20160604 started
+"bash -c "echo 20160616 | ./dump.sh caida | python file2trace.py caida | python dump_graph.py" >/out_dir//20160616/20160616.graph
+2016-12-23 17:22:27 analyze11 20160616 finished, time used:  3718.227175(s)python /home/john/thesis_downloader_dist/manager/analyze_manager//run.py caida on_notify finished analyze11 20160616 3718.227175
+20160603
+2016-12-23 17:22:27 analyze11 20160603 started
+"bash -c "echo 20160613 | ./dump.sh caida | python file2trace.py caida | python dump_graph.py" >/out_dir//20160613/20160613.graph
+2016-12-23 17:38:38 analyze11 20160613 finished, time used:  3954.80664086(s)python /home/john/thesis_downloader_dist/manager/analyze_manager//run.py caida on_notify finished analyze11 20160613 3954.80664086
+20160602
+2016-12-23 17:38:39 analyze11 20160602 started
+"bash -c "echo 20160608 | ./dump.sh caida | python file2trace.py caida | python dump_graph.py" >/out_dir//20160608/20160608.graph
+2016-12-23 17:50:00 analyze11 20160608 finished, time used:  2566.70630789(s)python /home/john/thesis_downloader_dist/manager/analyze_manager//run.py caida on_notify finished analyze11 20160608 2566.70630789
+20160601
+2016-12-23 17:50:01 analyze11 20160601 started
+"bash -c "echo 20160606 | ./dump.sh caida | python file2trace.py caida | python dump_graph.py" >/out_dir//20160606/20160606.graph
+2016-12-23 18:00:08 analyze11 20160606 finished, time used:  2390.64612007(s)python /home/john/thesis_downloader_dist/manager/analyze_manager//run.py caida on_notify finished analyze11 20160606 2390.64612007
+20160531
+2016-12-23 18:00:09 analyze11 20160531 started
+"bash -c "echo 20160611 | ./dump.sh caida | python file2trace.py caida | python dump_graph.py" >/out_dir//20160611/20160611.graph
+2016-12-23 18:03:07 analyze11 20160611 finished, time used:  3687.002316(s)python /home/john/thesis_downloader_dist/manager/analyze_manager//run.py caida on_notify finished analyze11 20160611 3687.002316
+20160530
+2016-12-23 18:03:08 analyze11 20160530 started
+"bash -c "echo 20160605 | ./dump.sh caida | python file2trace.py caida | python dump_graph.py" >/out_dir//20160605/20160605.graph
+2016-12-23 18:05:09 analyze11 20160605 finished, time used:  2677.35538697(s)python /home/john/thesis_downloader_dist/manager/analyze_manager//run.py caida on_notify finished analyze11 20160605 2677.35538697
+20160529
+2016-12-23 18:05:10 analyze11 20160529 started
+"bash -c "echo 20160609 | ./dump.sh caida | python file2trace.py caida | python dump_graph.py" >/out_dir//20160609/20160609.graph
+2016-12-23 18:06:21 analyze11 20160609 finished, time used:  3607.27057505(s)python /home/john/thesis_downloader_dist/manager/analyze_manager//run.py caida on_notify finished analyze11 20160609 3607.27057505
+20160528
+2016-12-23 18:06:22 analyze11 20160528 started
+"bash -c "echo 20160610 | ./dump.sh caida | python file2trace.py caida | python dump_graph.py" >/out_dir//20160610/20160610.graph
+2016-12-23 18:09:26 analyze11 20160610 finished, time used:  3797.64339399(s)python /home/john/thesis_downloader_dist/manager/analyze_manager//run.py caida on_notify finished analyze11 20160610 3797.64339399
+20160527
+2016-12-23 18:09:27 analyze11 20160527 started
+"bash -c "echo 20160607 | ./dump.sh caida | python file2trace.py caida | python dump_graph.py" >/out_dir//20160607/20160607.graph
+2016-12-23 18:19:13 analyze11 20160607 finished, time used:  3754.25800681(s)python /home/john/thesis_downloader_dist/manager/analyze_manager//run.py caida on_notify finished analyze11 20160607 3754.25800681
+20160526
+2016-12-23 18:19:13 analyze11 20160526 started
+"bash -c "echo 20160531 | ./dump.sh caida | python file2trace.py caida | python dump_graph.py" >/out_dir//20160531/20160531.graph
+2016-12-23 18:21:27 analyze11 20160531 finished, time used:  1277.444875(s)python /home/john/thesis_downloader_dist/manager/analyze_manager//run.py caida on_notify finished analyze11 20160531 1277.444875
+20160525
+2016-12-23 18:21:27 analyze11 20160525 started
+"bash -c "echo 20160603 | ./dump.sh caida | python file2trace.py caida | python dump_graph.py" >/out_dir//20160603/20160603.graph
+2016-12-23 18:22:28 analyze11 20160603 finished, time used:  3601.33077383(s)python /home/john/thesis_downloader_dist/manager/analyze_manager//run.py caida on_notify finished analyze11 20160603 3601.33077383
+20160524
+2016-12-23 18:22:29 analyze11 20160524 started
+"bash -c "echo 20160604 | ./dump.sh caida | python file2trace.py caida | python dump_graph.py" >/out_dir//20160604/20160604.graph
+2016-12-23 18:26:03 analyze11 20160604 finished, time used:  3851.40598512(s)python /home/john/thesis_downloader_dist/manager/analyze_manager//run.py caida on_notify finished analyze11 20160604 3851.40598512
+20160523
+2016-12-23 18:26:03 analyze11 20160523 started
+"bash -c "echo 20160602 | ./dump.sh caida | python file2trace.py caida | python dump_graph.py" >/out_dir//20160602/20160602.graph
+2016-12-23 18:40:50 analyze11 20160602 finished, time used:  3731.06785917(s)python /home/john/thesis_downloader_dist/manager/analyze_manager//run.py caida on_notify finished analyze11 20160602 3731.06785917
+20160522
+2016-12-23 18:40:50 analyze11 20160522 started
+"bash -c "echo 20160601 | ./dump.sh caida | python file2trace.py caida | python dump_graph.py" >/out_dir//20160601/20160601.graph
+2016-12-23 18:52:10 analyze11 20160601 finished, time used:  3728.992239(s)python /home/john/thesis_downloader_dist/manager/analyze_manager//run.py caida on_notify finished analyze11 20160601 3728.992239
+20160521
+2016-12-23 18:52:10 analyze11 20160521 started
+"bash -c "echo 20160526 | ./dump.sh caida | python file2trace.py caida | python dump_graph.py" >/out_dir//20160526/20160526.graph
+2016-12-23 19:01:38 analyze11 20160526 finished, time used:  2544.6319139(s)python /home/john/thesis_downloader_dist/manager/analyze_manager//run.py caida on_notify finished analyze11 20160526 2544.6319139
+20160520
+2016-12-23 19:01:38 analyze11 20160520 started
+"bash -c "echo 20160529 | ./dump.sh caida | python file2trace.py caida | python dump_graph.py" >/out_dir//20160529/20160529.graph
+2016-12-23 19:07:05 analyze11 20160529 finished, time used:  3715.16090012(s)python /home/john/thesis_downloader_dist/manager/analyze_manager//run.py caida on_notify finished analyze11 20160529 3715.16090012
+20160519
+2016-12-23 19:07:05 analyze11 20160519 started
+"bash -c "echo 20160523 | ./dump.sh caida | python file2trace.py caida | python dump_graph.py" >/out_dir//20160523/20160523.graph
+2016-12-23 19:07:37 analyze11 20160523 finished, time used:  2493.42985415(s)python /home/john/thesis_downloader_dist/manager/analyze_manager//run.py caida on_notify finished analyze11 20160523 2493.42985415
+20160518
+2016-12-23 19:07:37 analyze11 20160518 started
+"bash -c "echo 20160528 | ./dump.sh caida | python file2trace.py caida | python dump_graph.py" >/out_dir//20160528/20160528.graph
+2016-12-23 19:07:50 analyze11 20160528 finished, time used:  3687.61814213(s)python /home/john/thesis_downloader_dist/manager/analyze_manager//run.py caida on_notify finished analyze11 20160528 3687.61814213
+20160517
+2016-12-23 19:07:50 analyze11 20160517 started
+"bash -c "echo 20160530 | ./dump.sh caida | python file2trace.py caida | python dump_graph.py" >/out_dir//20160530/20160530.graph
+2016-12-23 19:10:58 analyze11 20160530 finished, time used:  4070.769315(s)python /home/john/thesis_downloader_dist/manager/analyze_manager//run.py caida on_notify finished analyze11 20160530 4070.769315
+20160516
+2016-12-23 19:10:59 analyze11 20160516 started
+"bash -c "echo 20160527 | ./dump.sh caida | python file2trace.py caida | python dump_graph.py" >/out_dir//20160527/20160527.graph
+2016-12-23 19:12:24 analyze11 20160527 finished, time used:  3776.61092114(s)python /home/john/thesis_downloader_dist/manager/analyze_manager//run.py caida on_notify finished analyze11 20160527 3776.61092114
+20160515
+2016-12-23 19:12:25 analyze11 20160515 started
+"bash -c "echo 20160524 | ./dump.sh caida | python file2trace.py caida | python dump_graph.py" >/out_dir//20160524/20160524.graph
+2016-12-23 19:21:37 analyze11 20160524 finished, time used:  3547.99577999(s)python /home/john/thesis_downloader_dist/manager/analyze_manager//run.py caida on_notify finished analyze11 20160524 3547.99577999
+20160514
+2016-12-23 19:21:37 analyze11 20160514 started
+"bash -c "echo 20160525 | ./dump.sh caida | python file2trace.py caida | python dump_graph.py" >/out_dir//20160525/20160525.graph
+2016-12-23 19:21:58 analyze11 20160525 finished, time used:  3631.35310197(s)python /home/john/thesis_downloader_dist/manager/analyze_manager//run.py caida on_notify finished analyze11 20160525 3631.35310197
+20160513
+2016-12-23 19:21:59 analyze11 20160513 started
+"bash -c "echo 20160522 | ./dump.sh caida | python file2trace.py caida | python dump_graph.py" >/out_dir//20160522/20160522.graph
+2016-12-23 19:24:31 analyze11 20160522 finished, time used:  2620.09217405(s)python /home/john/thesis_downloader_dist/manager/analyze_manager//run.py caida on_notify finished analyze11 20160522 2620.09217405
+20160512
+2016-12-23 19:24:31 analyze11 20160512 started
+"bash -c "echo 20160519 | ./dump.sh caida | python file2trace.py caida | python dump_graph.py" >/out_dir//20160519/20160519.graph
+2016-12-23 19:50:14 analyze11 20160519 finished, time used:  2588.53059101(s)python /home/john/thesis_downloader_dist/manager/analyze_manager//run.py caida on_notify finished analyze11 20160519 2588.53059101
+20160511
+2016-12-23 19:50:14 analyze11 20160511 started
+"bash -c "echo 20160516 | ./dump.sh caida | python file2trace.py caida | python dump_graph.py" >/out_dir//20160516/20160516.graph
+2016-12-23 19:53:35 analyze11 20160516 finished, time used:  2556.62687182(s)python /home/john/thesis_downloader_dist/manager/analyze_manager//run.py caida on_notify finished analyze11 20160516 2556.62687182
+20160510
+2016-12-23 19:53:36 analyze11 20160510 started
+"bash -c "echo 20160521 | ./dump.sh caida | python file2trace.py caida | python dump_graph.py" >/out_dir//20160521/20160521.graph
+2016-12-23 19:55:38 analyze11 20160521 finished, time used:  3807.50516701(s)python /home/john/thesis_downloader_dist/manager/analyze_manager//run.py caida on_notify finished analyze11 20160521 3807.50516701
+20160509
+2016-12-23 19:55:39 analyze11 20160509 started
+"bash -c "echo 20160509 | ./dump.sh caida | python file2trace.py caida | python dump_graph.py" >/out_dir//20160509/20160509.graph
+2016-12-23 19:55:43 analyze11 20160509 finished, time used:  4.3631310463(s)python /home/john/thesis_downloader_dist/manager/analyze_manager//run.py caida on_notify finished analyze11 20160509 4.3631310463
+20160508
+2016-12-23 19:55:44 analyze11 20160508 started
+"bash -c "echo 20160508 | ./dump.sh caida | python file2trace.py caida | python dump_graph.py" >/out_dir//20160508/20160508.graph
+2016-12-23 19:55:54 analyze11 20160508 finished, time used:  9.80313396454(s)python /home/john/thesis_downloader_dist/manager/analyze_manager//run.py caida on_notify finished analyze11 20160508 9.80313396454
+20160507
+2016-12-23 19:55:54 analyze11 20160507 started
+"bash -c "echo 20160507 | ./dump.sh caida | python file2trace.py caida | python dump_graph.py" >/out_dir//20160507/20160507.graph
+2016-12-23 19:56:01 analyze11 20160507 finished, time used:  7.2202501297(s)python /home/john/thesis_downloader_dist/manager/analyze_manager//run.py caida on_notify finished analyze11 20160507 7.2202501297
+20160506
+2016-12-23 19:56:02 analyze11 20160506 started
+"bash -c "echo 20160506 | ./dump.sh caida | python file2trace.py caida | python dump_graph.py" >/out_dir//20160506/20160506.graph
+2016-12-23 19:56:13 analyze11 20160506 finished, time used:  10.7800788879(s)python /home/john/thesis_downloader_dist/manager/analyze_manager//run.py caida on_notify finished analyze11 20160506 10.7800788879
+20160505
+2016-12-23 19:56:13 analyze11 20160505 started
+"bash -c "echo 20160505 | ./dump.sh caida | python file2trace.py caida | python dump_graph.py" >/out_dir//20160505/20160505.graph
+2016-12-23 19:56:19 analyze11 20160505 finished, time used:  5.97017192841(s)python /home/john/thesis_downloader_dist/manager/analyze_manager//run.py caida on_notify finished analyze11 20160505 5.97017192841
+20160504
+2016-12-23 19:56:20 analyze11 20160504 started
+"bash -c "echo 20160504 | ./dump.sh caida | python file2trace.py caida | python dump_graph.py" >/out_dir//20160504/20160504.graph
+2016-12-23 19:56:26 analyze11 20160504 finished, time used:  5.91986989975(s)python /home/john/thesis_downloader_dist/manager/analyze_manager//run.py caida on_notify finished analyze11 20160504 5.91986989975
+20160503
+2016-12-23 19:56:26 analyze11 20160503 started
+"bash -c "echo 20160503 | ./dump.sh caida | python file2trace.py caida | python dump_graph.py" >/out_dir//20160503/20160503.graph
+2016-12-23 19:56:29 analyze11 20160503 finished, time used:  3.0417239666(s)python /home/john/thesis_downloader_dist/manager/analyze_manager//run.py caida on_notify finished analyze11 20160503 3.0417239666
+20160502
+2016-12-23 19:56:31 analyze11 20160502 started
+"bash -c "echo 20160514 | ./dump.sh caida | python file2trace.py caida | python dump_graph.py" >/out_dir//20160514/20160514.graph
+2016-12-23 20:00:59 analyze11 20160514 finished, time used:  2361.48908591(s)python /home/john/thesis_downloader_dist/manager/analyze_manager//run.py caida on_notify finished analyze11 20160514 2361.48908591
+20160501
+2016-12-23 20:00:59 analyze11 20160501 started
+"bash -c "echo 20160520 | ./dump.sh caida | python file2trace.py caida | python dump_graph.py" >/out_dir//20160520/20160520.graph
+2016-12-23 20:02:11 analyze11 20160520 finished, time used:  3632.85708904(s)python /home/john/thesis_downloader_dist/manager/analyze_manager//run.py caida on_notify finished analyze11 20160520 3632.85708904
+20160430
+2016-12-23 20:02:12 analyze11 20160430 started
+"bash -c "echo 20160517 | ./dump.sh caida | python file2trace.py caida | python dump_graph.py" >/out_dir//20160517/20160517.graph
+2016-12-23 20:07:49 analyze11 20160517 finished, time used:  3598.74598908(s)python /home/john/thesis_downloader_dist/manager/analyze_manager//run.py caida on_notify finished analyze11 20160517 3598.74598908
+20160429
+2016-12-23 20:07:50 analyze11 20160429 started
