@@ -39,8 +39,8 @@ def update_state_file(file_name, end_time, start_time="", is_init = False):
 			exit();
 	
 		st = start_time;
-		while(is_occupied(file_name)):
-			time.sleep(random.randint(1,3));
+		#while(is_occupied(file_name)):
+		#	time.sleep(random.randint(1,3));
 		fp = open(file_name, 'wb');
 	
 	else:

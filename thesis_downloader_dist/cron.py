@@ -1,7 +1,7 @@
 import datetime
 
-from ..worker.caida import caida
-import manager
+from worker import caida
+from manager import manager
 
 start_time = "20070913"
 #date = datetime.date.today().isoformat().replace('-','')

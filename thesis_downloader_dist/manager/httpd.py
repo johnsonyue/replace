@@ -3,6 +3,8 @@ import json
 import BaseHTTPServer
 import cgi
 
+import manager
+
 HOST_NAME = '172.17.0.4'
 PORT_NUMBER = 80
 
@@ -25,10 +27,10 @@ class Handler(BaseHTTPServer.BaseHTTPRequestHandler):
 		self.wfile.write("<body><p>It works!</p>")
 		self.wfile.write("</body></html>")
 	def do_POST(self):
-		action = self.path
+		action = self.path.replace('/','')
 		valid_action = [ "get_task", "on_notify", "auth" ]
 		if ( action not in valid_action ):
-			self.wfile.write("Invalid action")
+			self.wfile.write("Invalid Action: %s" % action)
 			return
 		
 		#get the config file from server.
@@ -47,7 +49,7 @@ class Handler(BaseHTTPServer.BaseHTTPRequestHandler):
 		})
 
 		if ( action == "get_task" ):
-			task = manager.get_task()
+			task = manager.get_task(state_file_name)
 			self.wfile.write(task)
 		elif ( action == "on_notify" ):
 			notify_type = post["notify_type"]
